@@ -1,73 +1,62 @@
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
+margin:0;
+font-family:Arial, sans-serif;
+background:#111;
+color:#fff;
 }
-
-/* ===== HERO SECTION ===== */
 
 .hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-    will-change:transform;
-    z-index:0; /* stacking context */
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position:relative;
+overflow:hidden;
+z-index:0;
 }
 
-/* ===== HEADLINE ===== */
-
 .headline{
-    letter-spacing:10px;
-    font-size:40px;
-    position:relative;
-    z-index:3; /* text always above image */
+letter-spacing:10px;
+font-size:40px;
+position:relative;
+z-index:3;
 }
 
 .headline span{
-    display:inline-block;
-    opacity:0;
-    transform:translateY(40px);
+display:inline-block;
+opacity:0;
+transform:translateY(40px);
 }
 
-/* ===== STATS ===== */
-
 .stats{
-    margin-top:20px;
-    position:relative;
-    z-index:3; /* keep above image */
+margin-top:20px;
+position:relative;
+z-index:3;
 }
 
 .stat{
-    opacity:0;
-    margin:10px 0;
+opacity:0;
+margin:10px 0;
 }
 
-/* ===== IMAGE WRAPPER ===== */
-
 .image-wrapper{
-    position:absolute;
-    bottom:60px;
-    left:50%;
-    transform:translateX(-50%);
-    width:400px;
-    overflow:hidden;
-    z-index:1; /* image below text */
+position:absolute;
+bottom:60px;
+left:50%;
+transform:translateX(-50%);
+width:400px;
+overflow:hidden;
+z-index:1;
 }
 
 .main-image{
-    width:100%;
-    display:block;
-    will-change:transform;
+width:100%;
+display:block;
+will-change:transform;
 }
 
-/* ===== NEXT SECTION ===== */
-
 .next{
-    height:200vh;
-    background:#222;
+height:200vh;
+background:#222;
 }
