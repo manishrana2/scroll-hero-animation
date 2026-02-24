@@ -77,13 +77,13 @@ scrollTL.to(".headline",{
     scale:0.9,
     opacity:0.4,
     ease:"none"
-},0);
+},0.3);
 
 scrollTL.to(".stats",{
     opacity:0,
     y:-40,
     ease:"none"
-},0);
+},0.3);
 
 scrollTL.to(".main-image",{
     y:-200,
