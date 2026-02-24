@@ -1,55 +1,59 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function(){
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ===== LOAD ANIMATION ===== */
+console.log("Hero scroll animation initialized");
 
-let tl = gsap.timeline();
+/* -------- Intro animation when page loads -------- */
 
-tl.to(".headline span",{
-    y:0,
-    opacity:1,
-    duration:0.6,
-    stagger:0.05,
-    ease:"power3.out"
+let introTimeline = gsap.timeline();
+
+introTimeline.to(".headline span",{
+y:0,
+opacity:1,
+duration:0.6,
+stagger:0.05,
+ease:"power2.out"
 })
 
 .to(".stat",{
-    opacity:1,
-    y:-10,
-    duration:0.6,
-    stagger:0.2
+opacity:1,
+y:-10,
+duration:0.6,
+stagger:0.2
 },"-=0.3");
 
 
-/* ===== SCROLL ANIMATION ===== */
+/* -------- Hero scroll based animation -------- */
 
-let scrollTL = gsap.timeline({
-    scrollTrigger:{
-        trigger:".hero",
-        start:"top top",
-        end:"+=150%",
-        scrub:true,
-        pin:true
-    }
+let heroScrollTimeline = gsap.timeline({
+scrollTrigger:{
+trigger:".hero",
+start:"top top",
+end:"+=150%",
+scrub:true,
+pin:true
+}
 });
 
-scrollTL.to(".headline",{
-    scale:0.9,
-    opacity:0.6,
-    ease:"none"
+/* subtle cinematic motion */
+
+heroScrollTimeline.to(".headline",{
+scale:0.9,
+opacity:0.6,
+ease:"none"
 },0.5);
 
-scrollTL.to(".stats",{
-    opacity:0,
-    y:-40,
-    ease:"none"
+heroScrollTimeline.to(".stats",{
+opacity:0,
+y:-40,
+ease:"none"
 },0.5);
 
-scrollTL.to(".main-image",{
-    y:-80,
-    scale:1.2,
-    ease:"none"
+heroScrollTimeline.to(".main-image",{
+y:-70,
+scale:1.18,
+ease:"none"
 },0);
 
 });
