@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+  .headline span{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(40px);
+}
+.stats{
+    margin-top:20px;
+}
+
+.stat{
+    opacity:0;
+    margin:10px 0;
+}
+
+.main-image{
+    position:absolute;
+    bottom:50px;
+    width:400px;
+}
+
+.next{
+    height:200vh;
+    background:#222;
+}
+
+  
