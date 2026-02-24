@@ -5,6 +5,8 @@ body{
     color:white;
 }
 
+/* ===== HERO SECTION ===== */
+
 .hero{
     height:100vh;
     display:flex;
@@ -13,15 +15,31 @@ body{
     align-items:center;
     position:relative;
     overflow:hidden;
+    will-change:transform;
+    z-index:0; /* stacking context */
 }
 
-  .headline span{
+/* ===== HEADLINE ===== */
+
+.headline{
+    letter-spacing:10px;
+    font-size:40px;
+    position:relative;
+    z-index:3; /* text always above image */
+}
+
+.headline span{
     display:inline-block;
     opacity:0;
     transform:translateY(40px);
 }
+
+/* ===== STATS ===== */
+
 .stats{
     margin-top:20px;
+    position:relative;
+    z-index:3; /* keep above image */
 }
 
 .stat{
@@ -29,15 +47,27 @@ body{
     margin:10px 0;
 }
 
-.main-image{
+/* ===== IMAGE WRAPPER ===== */
+
+.image-wrapper{
     position:absolute;
-    bottom:50px;
+    bottom:60px;
+    left:50%;
+    transform:translateX(-50%);
     width:400px;
+    overflow:hidden;
+    z-index:1; /* image below text */
 }
+
+.main-image{
+    width:100%;
+    display:block;
+    will-change:transform;
+}
+
+/* ===== NEXT SECTION ===== */
 
 .next{
     height:200vh;
     background:#222;
 }
-
-  
